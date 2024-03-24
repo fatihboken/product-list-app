@@ -1,0 +1,43 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  &_item {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+  }
+  .img-wrapper {
+    position: relative;
+    &:hover {
+      .description {
+        display: block;
+      }
+    }
+  }
+  .price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $cardBgColor;
+    color: $cardColor;
+    padding: $cardPadding;
+    font-size: 0.9rem;
+    border-radius: $borderRadius;
+    z-index: 2;
+  }
+  .description {
+    width: 200px;
+    position: absolute;
+    bottom: 20%;
+    display: none;
+  }
+
+  
+}
